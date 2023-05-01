@@ -15,9 +15,15 @@ public class PageCounter extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-        count++;
+        String resetNum = request.getParameter("reset");
 
-        out.println("<html><body><h1>page count: " + count + "</h1></body></html>");
+        if(resetNum != null && resetNum.equals("true")){
+            count = 0;
+        } else {
+            count ++;
+        }
+
+        out.println("<html>" + count + "</html>");
     }
 }
 
