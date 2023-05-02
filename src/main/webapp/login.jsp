@@ -8,6 +8,7 @@
     <%@ include file="partials/head.jsp" %>
 </head>
 <%@ include file="partials/navbar.jsp" %>
+
 <body>
 <h2>Login</h2>
 <form method="post">
